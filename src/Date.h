@@ -17,9 +17,11 @@ protected:
 	int annee;
 public:
 	Date();
+	Date(int jour, int mois, int annee);
 	virtual ~Date();
 	void normaliser();
 	void operator++();
+	bool operator>(Date& autre); // type reference
 
 	int getAnnee() const {
 		return annee;

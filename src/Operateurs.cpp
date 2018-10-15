@@ -19,5 +19,11 @@ int main() {
 	++aujourdhui;
 	cout << "Date apres ++ : " << aujourdhui.getAnnee() << "-" << aujourdhui.getMois() << "-" << aujourdhui.getJour() << endl;
 
+	Date noel(25,12,2018);
+	Date halloween(31,10,2018);
+
+	bool estNoelApres = noel > halloween;
+	cout << "Noel est " << ((estNoelApres)?"après":"avant") << " Halloween ";
+
 	return 0;
 }
