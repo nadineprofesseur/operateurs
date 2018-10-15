@@ -20,9 +20,15 @@ Date::Date() {
 Date::~Date() {
 }
 
+// TODO : programmer normaliser()
+void Date::normaliser()
+{
+}
+
 void Date::operator++()
 {
 	this->jour++;
+	this->normaliser();
 }
 
 }

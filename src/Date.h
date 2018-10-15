@@ -18,6 +18,7 @@ protected:
 public:
 	Date();
 	virtual ~Date();
+	void normaliser();
 	void operator++();
 
 	int getAnnee() const {
