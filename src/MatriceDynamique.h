@@ -8,11 +8,13 @@
 #ifndef MATRICEDYNAMIQUE_H_
 #define MATRICEDYNAMIQUE_H_
 
-namespace MondeMagique {
+namespace Operateurs {
 
 class MatriceDynamique {
 protected:
 	int** memoire;
+	int hauteur;
+	int largeur;
 public:
 	MatriceDynamique(int largeur, int hauteur);
 	virtual ~MatriceDynamique();
