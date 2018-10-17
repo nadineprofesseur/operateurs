@@ -38,5 +38,10 @@ int main() {
 	nouvelleMatrice.journaliser();
 	delete &nouvelleMatrice; // // ATTENTION !!!! même si pas de new, c'est de la mémoire dynamique (heap) // le new est caché dans le +
 
+	// tableau dynamique et arithmetique des pointeurs
+	int* pointeurInt = new int;
+	int* tableauInt = new int[10];
+	tableauInt[5] = 4; // *(tableauInt+5) = 4;
+
 	return 0;
 }
