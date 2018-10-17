@@ -51,4 +51,22 @@ void MatriceDynamique::journaliser()
 		cout << endl;
 	}
 }
+
+MatriceDynamique& MatriceDynamique::operator+(MatriceDynamique& autre)
+{
+	//if(this->largeur != autre.largeur || this->hauteur != autre.hauteur) return null; // lancer exception
+
+	MatriceDynamique* nouvelle = new MatriceDynamique(this->largeur, this->hauteur);
+
+	for(int rangee = 0; rangee < this->largeur; rangee++)
+	{
+		for(int colonne = 0; colonne < this->hauteur; colonne++)
+		{
+			nouvelle->memoire[rangee][colonne] = this->memoire[rangee][colonne] + autre.memoire[rangee][colonne];
+		}
+	}
+
+	return (*nouvelle); // Référencer le pointeur pour avoir l'objet, le type référence est comme le type normal en syntaxe
+}
+
 } /* namespace MondeMagique */

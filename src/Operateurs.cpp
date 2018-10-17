@@ -47,6 +47,13 @@ int main() {
 	MatriceDynamique quinteMatrice(5,5);
 	quinteMatrice.memoriser(2,2,11);
 	quinteMatrice.journaliser();
+	cout << endl;
+	MatriceDynamique matriceDesCinq(5,5);
+	matriceDesCinq.memoriser(1,1,3);
+	matriceDesCinq.journaliser();
+	cout << endl;
+	MatriceDynamique matriceFinale = quinteMatrice + matriceDesCinq;
+	matriceFinale.journaliser();
 
 	return 0;
 }

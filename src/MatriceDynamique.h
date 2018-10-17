@@ -22,6 +22,7 @@ public:
 	virtual ~MatriceDynamique();
 	void memoriser(int x, int y, int valeur);
 	void journaliser();
+	MatriceDynamique& operator+(MatriceDynamique&);
 };
 
 } /* namespace MondeMagique */
