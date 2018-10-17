@@ -21,6 +21,7 @@ public:
 	virtual ~Matrice();
 	void memoriser(int x, int y, int valeur);
 	void journaliser();
+	Matrice& operator+(Matrice&);
 
 };
 

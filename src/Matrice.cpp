@@ -50,4 +50,20 @@ void Matrice::journaliser()
 	}
 }
 
+Matrice& Matrice::operator+(Matrice& autre)
+{
+	Matrice* nouvelle = new Matrice();
+
+	for(int rangee = 0; rangee < 3; rangee++)
+	{
+		for(int colonne = 0; colonne < 3; colonne++)
+		{
+			nouvelle->memoire[rangee][colonne] = this->memoire[rangee][colonne] + autre.memoire[rangee][colonne];
+		}
+	}
+
+	return (*nouvelle); // Référencer le pointeur pour avoir l'objet, le type référence est comme le type normal en syntaxe
+}
+
+
 } /* namespace MondeMagique */

@@ -34,5 +34,9 @@ int main() {
 	matriceDesUns.journaliser();
 	matriceDesChiffres.journaliser();
 
+	Matrice nouvelleMatrice = matriceDesUns + matriceDesChiffres;
+	nouvelleMatrice.journaliser();
+	delete &nouvelleMatrice; // // ATTENTION !!!! même si pas de new, c'est de la mémoire dynamique (heap) // le new est caché dans le +
+
 	return 0;
 }
