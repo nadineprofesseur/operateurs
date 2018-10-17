@@ -9,6 +9,7 @@
 #include <iostream>
 using namespace std;
 #include "Date.h"
+#include "Matrice.h"
 using namespace Operateurs;
 
 int main() {
@@ -23,7 +24,15 @@ int main() {
 	Date halloween(31,10,2018);
 
 	bool estNoelApres = noel > halloween;
-	cout << "Noel est " << ((estNoelApres)?"après":"avant") << " Halloween ";
+	cout << "Noel est " << ((estNoelApres)?"après":"avant") << " Halloween " << endl;
+
+	Matrice matriceDesUns(1);
+	Matrice matriceDesChiffres(2);
+	matriceDesChiffres.memoriser(2,2,5);
+	matriceDesChiffres.memoriser(1,0,4);
+	matriceDesChiffres.memoriser(0,1,9);
+	matriceDesUns.journaliser();
+	matriceDesChiffres.journaliser();
 
 	return 0;
 }
