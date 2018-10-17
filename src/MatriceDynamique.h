@@ -8,6 +8,8 @@
 #ifndef MATRICEDYNAMIQUE_H_
 #define MATRICEDYNAMIQUE_H_
 
+#include <iostream>
+
 namespace Operateurs {
 
 class MatriceDynamique {
@@ -18,6 +20,8 @@ protected:
 public:
 	MatriceDynamique(int largeur, int hauteur);
 	virtual ~MatriceDynamique();
+	void memoriser(int x, int y, int valeur);
+	void journaliser();
 };
 
 } /* namespace MondeMagique */

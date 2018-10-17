@@ -45,6 +45,8 @@ int main() {
 	tableauInt[5] = 4; // *(tableauInt+5) = 4;
 
 	MatriceDynamique quinteMatrice(5,5);
+	quinteMatrice.memoriser(2,2,11);
+	quinteMatrice.journaliser();
 
 	return 0;
 }
